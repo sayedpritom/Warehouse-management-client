@@ -1,0 +1,43 @@
+.item {
+    background-color: white;
+    min-height: 800px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+}
+
+.item:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.item-image {
+    padding: 30px;
+    border-radius: 25px;
+
+}
+
+.item-image div {
+    border: 1px solid lightgray;
+    padding: 30px;
+    border-radius: 25px;
+
+}
+
+.item-image div img {
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 25px 20px -20px;
+
+}
+
+.item-info {
+    padding: 30px;
+}
+
+.item-name {
+    font-weight: 700;
+    color: #5662FB;
+    margin-bottom: 20px;
+}
+
+.item-description {
+    min-height: 200px;
+}

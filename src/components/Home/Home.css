@@ -1,0 +1,14 @@
+.home {
+    background-color: #f5fafe;
+  }
+
+.header-banner-container-0 {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-color: #000966;
+}
+
+.header-banner-container {
+    background-position: left top;
+    background-repeat: no-repeat;
+}

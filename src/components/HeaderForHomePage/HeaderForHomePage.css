@@ -1,0 +1,11 @@
+.navbar {
+    color: white!important;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+    .header-links {
+        color: black!important;
+    }
+}

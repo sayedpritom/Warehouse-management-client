@@ -1,0 +1,22 @@
+.companies {
+    background-color: #5463ff;
+    padding: 60px 0;
+}
+
+.companies-we-work-with {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.brand-logos > img {
+    height: 50px;
+    width: auto;
+    margin: 30px 50px;
+}

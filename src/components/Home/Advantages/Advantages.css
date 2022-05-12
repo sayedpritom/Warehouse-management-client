@@ -1,0 +1,43 @@
+.advantages {
+    margin: 50px 0;
+}
+
+.advantages-title, .heading-1 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 50px;
+    color: #161414;
+}
+
+.cards {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 35px 45px;
+    margin: 25px 0;
+    min-height: 420px;
+}
+
+.cards:hover {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cards > h4 {
+    color: #161414;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.advantage-icons {
+    font-size: 28px;
+    color: white;
+    background-color: #5463ff;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: content-box;
+    border-radius: 100%;
+}

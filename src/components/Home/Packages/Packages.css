@@ -1,0 +1,96 @@
+.packages-container {
+    padding: 0px 0 100px 0;
+}
+
+.packages {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.package-headings {
+    color: #161414;
+    font-weight: 700;
+}
+
+.perMonthPrice {
+    background-color: #5463ff;
+    border-radius: 10px;
+    padding: 20px 0 5px 0;
+}
+
+.packages ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 35px;
+    margin: 30px 0;
+    font-weight: 500;
+    color: #5463ff;
+}
+
+.packages .specs {
+    color: black;
+}
+
+.packages button {
+    color: white;
+    background-color: #161414;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.unavailable, .unavailable .specs {
+    color: gray;
+}
+
+/* Hover styles */
+.packages:hover {
+    background-color: #5463ff;
+    color: white !important;
+}
+
+.packages:hover .package-headings {
+    color: white;
+}
+
+.packages:hover p {
+    color: white;
+}
+
+.packages:hover .perMonthPrice {
+    background-color: #6573ff;
+    color: white;
+}
+
+.packages:hover .specs {
+    background-color: #5463ff;
+    color: white;
+}
+
+.packages:hover li {
+    color: white;
+}
+
+.packages:hover li {
+    color: white;
+}
+
+.packages:hover .unavailable, .packages:hover .unavailable {
+    color: #bbc0ffc7;
+}
+
+.packages:hover .unavailable .specs {
+    color: #bbc0ffc7;
+}
+
+.packages:hover .unavailable .specs {
+    color: #bbc0ffc7;
+}
+
+.packages:hover button {
+    color: #161414;
+    background-color: white;
+}
