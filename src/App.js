@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Register from './components/Register/Register';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import UpdateItem from './components/UpdateItem/UpdateItem';
+import ManageInventories from './components/ManageInventories/ManageInventories';
 
 
 function App() {
@@ -21,6 +22,11 @@ function App() {
         <Route path="/inventory/:id" element={
           <RequireAuth>
             <UpdateItem></UpdateItem>
+          </RequireAuth>
+        } />
+        <Route path="/manageInventories" element={
+          <RequireAuth>
+            <ManageInventories></ManageInventories>
           </RequireAuth>
         } />
         <Route path="*" element={<NotFound />} />

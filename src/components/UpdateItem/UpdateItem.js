@@ -24,7 +24,7 @@ const UpdateItem = () => {
         const updatedItem = { ...item, quantity: newQuantity }
         setRestock(0)
 
-        fetch(`http://localhost:5001/item/${id}`, {
+        fetch(`http://localhost:5001/update/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

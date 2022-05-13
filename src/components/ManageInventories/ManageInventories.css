@@ -1,0 +1,12 @@
+.inventoryHeader {
+    padding: 20px 0 15px 0;
+    background: #FAFAFA;
+    margin-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.inventoryHeader h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #161616;
+}

@@ -1,0 +1,13 @@
+.remove-btn {
+    background-color: #EB5757;
+    border: none;
+    padding: 10px 5px;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background-color: #df1c1c;
+}
