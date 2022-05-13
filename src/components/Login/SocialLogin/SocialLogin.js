@@ -32,6 +32,7 @@ const SocialLogin = () => {
 
     return (
         <div>
+            {errorElement}
             <p className="mx-auto text-center font-bold">Or continue with:</p>
             <button
                 onClick={() => signInWithGoogle()}

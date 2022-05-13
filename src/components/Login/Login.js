@@ -6,7 +6,8 @@ import { Form } from 'react-bootstrap';
 import SocialLogin from './SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 // import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 // import { toast } from 'react-toastify';
@@ -23,6 +24,29 @@ const Login = () => {
 
     const emailRef = useRef('');
     const passwordRef = useRef('');
+
+
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+
+    const navigate = useNavigate();
+
+    let errorElement;
+
+
+    if(loading) {
+        return <Loading></Loading>
+    }
+
+    if (error) {
+        errorElement = <p className="text-danger">Error: {error?.message}</p>
+    }
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -56,6 +80,7 @@ const Login = () => {
                     </Button>
                 </Form>
                 <p>Don't have an account? <span><Link to='/register'>Register from here</Link></span></p> 
+                {errorElement}
                 <SocialLogin></SocialLogin>
             </div>
         </div>

@@ -8,8 +8,6 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 const ItemRows = (props) => {
     const { _id, img, name, price, quantity, supplier } = props.item;
 
-
-
     return (
         <div className="">
             <div className="row itemRows my-3 align-items-center flex-wrap">

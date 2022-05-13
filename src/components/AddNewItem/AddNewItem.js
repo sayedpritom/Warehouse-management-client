@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const AddNewItem = () => {
     const notify = () => toast("New Item Added");
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [user] = useAuthState(auth);
 
 
@@ -30,6 +30,7 @@ const AddNewItem = () => {
                 console.error('Error:', error);
             });
             notify()
+            reset();
         
     }
 
