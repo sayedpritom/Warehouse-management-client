@@ -10,10 +10,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 // import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 // import { toast } from 'react-toastify';
-// import axios from 'axios';
 // import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
@@ -47,7 +47,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
 
@@ -57,7 +57,10 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        console.log(user)
+        const { data } = await axios.post(`http://localhost:5001/login`, {email})
+        console.log(data)
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true }); 
     }
 
 

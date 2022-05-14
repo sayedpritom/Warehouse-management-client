@@ -5,25 +5,27 @@ https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-sayedprit
 
 https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-sayedpritom999
 
+https://stackoverflow.com/questions/72240944/what-is-the-difference-between-css-selectors-element-elementdiv-p-vs-element
+
 
 Techs:
 
 react hook form
 
 
-NodeJS is a runtime environment for javascript. It allows javascript to run in desktop & server. It comes with a lot of modules and NodeJS is used in web development. 
+NodeJS is a runtime environment for javascript. It allows javascript to run on desktop & server. It comes with a lot of modules and NodeJS is mostly used in web development. 
 
-Whereas javascript is a scripting language. Abbrevited as JS. It is a high level programming language used mostly for mobile and desktop application development to add interactivity. 
-Javascript itself only can run in browsers but with the help of NodeJS javascript can be run in desktop and server side aswell. 
-
-
-Nodejs: NodeJS is a platform built on Chrome's V8 engine for easily building fast and scalable network applications. Node.js uses event-driven, non blocking I/O model that make it lightweight and efficient, perfect6 for data intensive realtime applications that run accross dristributed devices. 
+Whereas Javascript is a scripting language. Abbreviated as JS. It is a high-level programming language used mostly for mobile and desktop application development to add interactivity. 
+Javascript itself only can run in browsers but with the help of NodeJS javascript can be run on the desktop and server-side as well. 
 
 
-MongoDB: Mongodb is an open-source document-oriented database. Which is designed to store a large scale of data. Mongodb is categorized under the NoSQL database because the storage and tireval of data in the mongodb are not in the form of tables. It is widely used for storing product information and details by finanace and e-commerce comapines. 
+Nodejs: NodeJS is a platform built on Chrome's V8 engine for easily building fast and scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices. 
+
+
+MongoDB: MongoDB is an open-source document-oriented database. Which is designed to store a large scale of data. MongoDB is categorized under the NoSQL database because the storage and retrieval of data in MongoDB are not in the form of tables. It is widely used for storing product information and details by finance and e-commerce companies. 
 
 
 
-SQL vs NoSQL: SQL databases are primarily called Relational Databases, Whereas NoSQL database are primarily called as non-relational or distributed database. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable. SQL databases are table-based, while NoSQL databases are either key-value paris, document-based, graph databases or wide-column stores. 
+SQL vs NoSQL: SQL databases are primarily called Relational Databases, Whereas NoSQL databases are primarily called non-relational or distributed databases. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable. SQL databases are table-based, while NoSQL databases are either key-value pairs, document-based, graph databases, or wide-column stores. 
 
-JSON Web Token (JWT) is used for securely transmitting information between parties as JSON object. The process is: Server generates a token that certifies teh user identity, and sends it to the client. The client will send the token back to the server for every subsequent request, so the serer knows the request comes from a partifular identity. 
+JSON Web Token (JWT) is used for securely transmitting information between parties as a JSON object. The process is: The server generates a token that certifies the user identity, and sends it to the client. The client will send the token back to the server for every subsequent request, so the server knows the request comes from a particular identity. 

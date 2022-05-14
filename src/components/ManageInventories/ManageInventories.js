@@ -1,26 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import ItemRows from './ItemRows/ItemRows';
 import './ManageInventories.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import axios from 'axios';
+import { signOut } from 'firebase/auth';
 
 
 const ManageInventories = () => {
     const [items, setItems] = useState([]);
     const [user] = useAuthState(auth);
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (location.pathname === "/myItems") {
-            fetch(`http://localhost:5001/manageInventories/${user?.email}`)
-                .then(response => response.json())
-                .then(data => setItems(data))
+            fetch(`http://localhost:5001/manageInventories/${user?.email}`, {
+                headers: {authorization: `Bearer ${localStorage.getItem('accessToken')}`}})
+                .then((response) => {
+                    // 1. check response.ok
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    return Promise.reject(response); // 2. reject instead of throw
+                })
+                .then(data => {
+                    if (data.message !== 'Forbidden Access') {
+                        setItems(data)
+                    }
+                })
+                .catch((error) => {
+                    if (error.status === 401 || error.status === 403) {
+                        signOut(auth)
+                        navigate('/login')
+                    }
+                });
+
         } else {
             fetch("http://localhost:5001/manageInventories")
                 .then(response => response.json())
                 .then(data => setItems(data))
         }
+
     }, [user, location.pathname])
 
 
@@ -37,6 +59,8 @@ const ManageInventories = () => {
                 })
         }
     }
+
+    console.log(items)
 
     return (
         <div className="manageInventories">
