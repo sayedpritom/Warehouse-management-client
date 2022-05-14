@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 
-
 const ItemRows = (props) => {
     const { _id, img, name, price, quantity, supplier } = props.item;
 

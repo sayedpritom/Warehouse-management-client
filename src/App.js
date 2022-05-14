@@ -10,6 +10,7 @@ import UpdateItem from './components/UpdateItem/UpdateItem';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import AddNewItem from './components/AddNewItem/AddNewItem';
 import MyItems from './components/MyItems/MyItems';
+import Blogs from './components/Blogs/Blogs';
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="home" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/inventory/:id" element={

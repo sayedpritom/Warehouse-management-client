@@ -52,6 +52,7 @@ const Header = (props) => {
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 <Nav.Link as={Link} to="/home" style={textColor} href="#action1" className="header-links m-2">Home</Nav.Link>
+                                <Nav.Link as={Link} to="/blogs" style={textColor} href="#action1" className="header-links m-2">Blogs</Nav.Link>
                                 {user && <Nav.Link as={Link} to="/manageInventories" style={textColor} href="#action1" className="header-links m-2">Manage Items</Nav.Link>}
                                 {user && <Nav.Link as={Link} to="/addNewItem" style={textColor} href="#action1" className="header-links m-2">Add Items</Nav.Link>}
                                 {user && <Nav.Link as={Link} to="/myItems" style={textColor} href="#action1" className="header-links m-2">My Items</Nav.Link>}
