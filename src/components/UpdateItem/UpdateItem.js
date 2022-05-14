@@ -24,7 +24,7 @@ const UpdateItem = () => {
         const updatedItem = { ...item, quantity: newQuantity }
         setRestock(0)
 
-        fetch(`http://localhost:5001/update/${id}`, {
+        fetch(`https://secure-waters-74032.herokuapp.com/update/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ const UpdateItem = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5001/item/${id}`)
+        fetch(`https://secure-waters-74032.herokuapp.com/item/${id}`)
             .then(response => response.json())
             .then(data => {
                 setItem(data);

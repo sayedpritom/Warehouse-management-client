@@ -17,7 +17,7 @@ const AddNewItem = () => {
   
         data.email = user.email;  
 
-        fetch('http://localhost:5001/add', {
+        fetch('https://secure-waters-74032.herokuapp.com/add', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

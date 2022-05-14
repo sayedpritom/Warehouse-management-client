@@ -16,7 +16,7 @@ const ManageInventories = () => {
 
     useEffect(() => {
         if (location.pathname === "/myItems") {
-            fetch(`http://localhost:5001/manageInventories/${user?.email}`, {
+            fetch(`https://secure-waters-74032.herokuapp.com/manageInventories/${user?.email}`, {
                 headers: {authorization: `Bearer ${localStorage.getItem('accessToken')}`}})
                 .then((response) => {
                     // 1. check response.ok
@@ -38,7 +38,7 @@ const ManageInventories = () => {
                 });
 
         } else {
-            fetch("http://localhost:5001/manageInventories")
+            fetch("https://secure-waters-74032.herokuapp.com/manageInventories")
                 .then(response => response.json())
                 .then(data => setItems(data))
         }
@@ -48,7 +48,7 @@ const ManageInventories = () => {
 
     const handleDelete = (id) => {
         if (window.confirm('Are you sure you want to delete?')) {
-            fetch(`http://localhost:5001/delete/${id}`, {
+            fetch(`https://secure-waters-74032.herokuapp.com/delete/${id}`, {
                 method: 'DELETE',
             })
                 .then(response => response.json())
