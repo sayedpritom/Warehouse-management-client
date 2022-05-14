@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Register = () => {
@@ -28,9 +29,6 @@ const Register = () => {
         await updateProfile({ displayName: name });
     }
 
-
-
-
     return (
         <div className="login">
             <div className="container w-50 mx-auto my-5 border p-5 rounded">
@@ -57,6 +55,7 @@ const Register = () => {
                         Submit
                     </Button>
                 </Form>
+                <p className="my-4">Already have an account? <span><Link to='/login'>Login from here</Link></span></p> 
             </div>
         </div>
     );

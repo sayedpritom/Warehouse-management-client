@@ -4,10 +4,12 @@ import './Login.css';
 import { Button } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import SocialLogin from './SocialLogin/SocialLogin';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 // import { toast } from 'react-toastify';
@@ -21,6 +23,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
 
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -58,6 +61,18 @@ const Login = () => {
     }
 
 
+    const resetPassword = async() => {
+        const email = emailRef.current.value;
+        if(email) {
+            await sendPasswordResetEmail(email);
+            toast("Email Sent");
+        } else {
+            toast("Please enter email address");
+        }
+
+    }
+
+
     return (
         <div className="login">
             <div className="container w-50 mx-auto my-5 border p-5 rounded">
@@ -79,9 +94,11 @@ const Login = () => {
                         Submit
                     </Button>
                 </Form>
-                <p>Don't have an account? <span><Link to='/register'>Register from here</Link></span></p> 
+                <p className="my-4">Don't have an account? <span><Link to='/register'>Register from here</Link></span></p> 
+                <p>Forgot Password? <button className="btn btn-link" onClick={resetPassword}>Reset from here</button> </p> 
                 {errorElement}
                 <SocialLogin></SocialLogin>
+                <ToastContainer />
             </div>
         </div>
     );
