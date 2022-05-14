@@ -1,0 +1,14 @@
+.notFound {
+    margin: 200px auto;
+    text-align: center;
+}
+
+.notFound h1 {
+    font-size: 54px;
+    font-weight: 700;
+    color: rgb(32, 32, 32);
+}
+
+.notFound span {
+    color: #5662FB;
+}
