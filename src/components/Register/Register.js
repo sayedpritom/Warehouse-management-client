@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
     const [
@@ -13,11 +14,18 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const [updateProfile, updating, error1] = useUpdateProfile(auth);
+    const [token]= useToken(user);
+
+    const navigate = useNavigate();
 
 
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
+
+    if (token) {
+        navigate('/home')
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();

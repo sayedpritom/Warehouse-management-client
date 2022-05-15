@@ -11,6 +11,7 @@ import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import useToken from '../../hooks/useToken';
 // import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 // import { toast } from 'react-toastify';
@@ -24,7 +25,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
-
+    const [token] = useToken(user);
     const emailRef = useRef('');
     const passwordRef = useRef('');
 
@@ -38,7 +39,7 @@ const Login = () => {
     let errorElement;
 
 
-    if(loading) {
+    if (loading) {
         return <Loading></Loading>
     }
 
@@ -46,8 +47,8 @@ const Login = () => {
         errorElement = <p className="text-danger">Error: {error?.message}</p>
     }
 
-    if (user) {
-        // navigate(from, { replace: true });
+    if (token) {
+        navigate(from, { replace: true });
     }
 
 
@@ -57,16 +58,12 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post(`https://secure-waters-74032.herokuapp.com/login`, {email})
-        console.log(data)
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true }); 
     }
 
 
-    const resetPassword = async() => {
+    const resetPassword = async () => {
         const email = emailRef.current.value;
-        if(email) {
+        if (email) {
             await sendPasswordResetEmail(email);
             toast("Email Sent");
         } else {
@@ -97,8 +94,8 @@ const Login = () => {
                         Submit
                     </Button>
                 </Form>
-                <p className="my-4">Don't have an account? <span><Link to='/register'>Register from here</Link></span></p> 
-                <p>Forgot Password? <button className="btn btn-link" onClick={resetPassword}>Reset from here</button> </p> 
+                <p className="my-4">Don't have an account? <span><Link to='/register'>Register from here</Link></span></p>
+                <p>Forgot Password? <button className="btn btn-link" onClick={resetPassword}>Reset from here</button> </p>
                 {errorElement}
                 <SocialLogin></SocialLogin>
                 <ToastContainer />
