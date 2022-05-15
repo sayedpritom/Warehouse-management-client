@@ -1,6 +1,3 @@
-https://sarmin-akter-dipty-portfolio.netlify.app
-
-
 https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-sayedpritom999
 
 https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-sayedpritom999
@@ -8,24 +5,27 @@ https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-sayedprit
 https://stackoverflow.com/questions/72240944/what-is-the-difference-between-css-selectors-element-elementdiv-p-vs-element
 
 
-Techs:
-
-react hook form
-
-
-NodeJS is a runtime environment for javascript. It allows javascript to run on desktop & server. It comes with a lot of modules and NodeJS is mostly used in web development. 
-
-Whereas Javascript is a scripting language. Abbreviated as JS. It is a high-level programming language used mostly for mobile and desktop application development to add interactivity. 
-Javascript itself only can run in browsers but with the help of NodeJS javascript can be run on the desktop and server-side as well. 
-
-
-Nodejs: NodeJS is a platform built on Chrome's V8 engine for easily building fast and scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices. 
-
-
-MongoDB: MongoDB is an open-source document-oriented database. Which is designed to store a large scale of data. MongoDB is categorized under the NoSQL database because the storage and retrieval of data in MongoDB are not in the form of tables. It is widely used for storing product information and details by finance and e-commerce companies. 
+Tasks left: 
+Make all buttons work
+add few animation
+add sold in items data
 
 
 
-SQL vs NoSQL: SQL databases are primarily called Relational Databases, Whereas NoSQL databases are primarily called non-relational or distributed databases. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable. SQL databases are table-based, while NoSQL databases are either key-value pairs, document-based, graph databases, or wide-column stores. 
 
-JSON Web Token (JWT) is used for securely transmitting information between parties as a JSON object. The process is: The server generates a token that certifies the user identity, and sends it to the client. The client will send the token back to the server for every subsequent request, so the server knows the request comes from a particular identity. 
+Optional but highly encourage:
+Implement 401, 403 for JWT of the My Items page. Log out and send the user to the login page for these two statuses.
+Try to use a better-looking confirmation dialogue other than the browser's default confirm.
+On the Manage Inventory, create many items by duplicating your items and implementing pagination.
+
+
+Optional
+Add some animation while applicable.
+Please Use icons whenever applicable and use fonts (google fonts). For example, for delete, you can use the delete icon. To add an item, you can use an add icon.
+Make the footer a little more realistic
+Optimize your images
+Add something extra of your own. This will help you in the future during the job interview.
+Also, if you want, you can use mongoose.
+If possible, replace the default react favicon and give an icon for your website.
+using axios is optional. If you are using axios, make sure you use the earlier version.
+If possible give swr or react-query a try. This will be helpful in the future.

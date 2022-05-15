@@ -83,7 +83,7 @@ const ManageInventories = () => {
                         <h6>Supplier</h6>
                     </div>
                 </div>
-                {items.map(item => <ItemRows item={item} key={item.key} handleDelete={handleDelete}></ItemRows>)}
+                {items.map(item => <ItemRows item={item} key={item._id} handleDelete={handleDelete}></ItemRows>)}
             </div>
         </div>
     );
