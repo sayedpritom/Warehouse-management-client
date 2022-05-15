@@ -9,6 +9,7 @@ Tasks left:
 Make all buttons work
 add few animation
 add sold in items data
+navbar expand-lg
 
 
 

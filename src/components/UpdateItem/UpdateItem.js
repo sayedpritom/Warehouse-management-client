@@ -10,12 +10,27 @@ const UpdateItem = () => {
     const [quantity, setQuantity] = useState(0);
 
 
-    const handleDelivered = () => {
-        setQuantity(quantity - 1)
-    }
-
     const handleOnChange = (event) => {
         setRestock(parseInt(event.target.value))
+    }
+
+
+    const handleDelivered = () => {
+        const newQuantity = quantity - 1;
+        const updatedItem = { ...item, quantity: newQuantity }
+
+        fetch(`http://localhost:5001/update/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedItem)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log("success", data)
+                setQuantity(quantity - 1)
+            })
     }
 
     const handleOnUpdate = () => {
@@ -24,23 +39,23 @@ const UpdateItem = () => {
         const updatedItem = { ...item, quantity: newQuantity }
         setRestock(0)
 
-        fetch(`https://secure-waters-74032.herokuapp.com/update/${id}`, {
+        fetch(`http://localhost:5001/update/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(updatedItem)
         })
-        .then(response => response.json())
-        .then(data => {
-            console.log("success", data)
-            alert("Item Successfully updated!")
-        })
+            .then(response => response.json())
+            .then(data => {
+                console.log("success", data)
+                alert("Item Successfully updated!")
+            })
 
     }
 
     useEffect(() => {
-        fetch(`https://secure-waters-74032.herokuapp.com/item/${id}`)
+        fetch(`http://localhost:5001/item/${id}`)
             .then(response => response.json())
             .then(data => {
                 setItem(data);
