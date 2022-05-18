@@ -4,6 +4,7 @@ import './Items.css';
 
 const Items = (props) => {
     const { _id, name, description, price, img, quantity, supplier } = props.item;
+    console.log(props.item)
     return (
         <div className="col-md-6 col-lg-4">
             <div className="item">
