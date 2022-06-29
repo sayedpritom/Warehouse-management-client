@@ -1,7 +1,7 @@
 ## This is a warehouse management website for a shoe company. The purpose is to managing a warehouse inventory of shoes. Live website link: https://warehouse-eebb3.web.app
 
 
-## Currently you're looking at the front-end. Implemented features and functionalities:
+## Currently you're looking at the front-end. Implemented features and functionalities are:
 * Home page with a header (simple navbar), banner, items (inventory items. Maximum 6 items), advantages section, pricing section, feature section,  footer section.
 
 * Extra sections(advantages section, pricing section, feature section,) on the home page.
