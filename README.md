@@ -38,6 +38,7 @@
 
 * Implemented the basic version of the jwt token for email/password-based authentication. 
 
+Used Technologies: HTML, CSS, Bootstrap, Javascript, React, React Router, React hook form, React Toastify, React firebase hooks, firebase, Axios, Json Web Token, Font Awesome, 
 
 ## Back-end Code: https://github.com/sayedpritom999/warehouse-management-server
 
@@ -48,3 +49,4 @@
 4. get, update, create, and delete a particular item
 5. used JWT middleware for user verification
 
+Used Technologies: Node, Express, MongoDB, Heroku
