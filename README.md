@@ -40,7 +40,7 @@
 
 Used Technologies: HTML, CSS, Bootstrap, Javascript, React, React Router, React hook form, React Toastify, React firebase hooks, firebase, Axios, Json Web Token, Font Awesome, 
 
-## Back-end Code: https://github.com/sayedpritom999/warehouse-management-server
+## Back-end Code: https://github.com/sayedpritom/warehouse-management-server
 
 ## In the back-end, the implemented APIs are:  
 1. get 6 inventory items for the "Home" page
